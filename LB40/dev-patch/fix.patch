@@ -1,0 +1,37 @@
+From bf52165bda53524a267c784696bd074111a2f178 Mon Sep 17 00:00:00 2001
+From: Richard Levitte <levitte@openssl.org>
+Date: Fri, 4 Nov 2016 14:21:46 +0100
+Subject: [PATCH] chacha20/poly1305: make sure to clear the buffer at correct
+ position
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+The offset to the memory to clear was incorrect, causing a heap buffer
+overflow.
+
+CVE-2016-7054
+
+Thanks to Robert Święcki for reporting this
+
+Reviewed-by: Rich Salz <rsalz@openssl.org>
+---
+ crypto/evp/e_chacha20_poly1305.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/crypto/evp/e_chacha20_poly1305.c b/crypto/evp/e_chacha20_poly1305.c
+index cf4097ba5d..952bd3fca7 100644
+--- a/crypto/evp/e_chacha20_poly1305.c
++++ b/crypto/evp/e_chacha20_poly1305.c
+@@ -299,7 +299,7 @@ static int chacha20_poly1305_cipher(EVP_CIPHER_CTX *ctx, unsigned char *out,
+                 memcpy(out, actx->tag, POLY1305_BLOCK_SIZE);
+             } else {
+                 if (CRYPTO_memcmp(temp, in, POLY1305_BLOCK_SIZE)) {
+-                    memset(out, 0, plen);
++                    memset(out - plen, 0, plen);
+                     return -1;
+                 }
+             }
+-- 
+2.25.1
+

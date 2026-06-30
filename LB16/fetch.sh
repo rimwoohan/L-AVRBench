@@ -1,0 +1,3 @@
+wget https://github.com/mudongliang/source-packages/raw/master/CVE-2015-8668/tiff-4.0.1.tar.gz
+tar -xvf tiff-4.0.1.tar.gz
+

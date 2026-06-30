@@ -1,0 +1,25 @@
+From 4e378ea8fb99e869768f34e900105e8c769adfcd Mon Sep 17 00:00:00 2001
+From: Cristy <urban-warrior@imagemagick.org>
+Date: Mon, 7 Aug 2017 15:18:47 -0400
+Subject: [PATCH] ...
+
+---
+ coders/wpg.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/coders/wpg.c b/coders/wpg.c
+index 4756dba3f..03937e06b 100644
+--- a/coders/wpg.c
++++ b/coders/wpg.c
+@@ -1127,7 +1127,7 @@ static Image *ReadWPGImage(const ImageInfo *image_info,
+               status=SetImageExtent(image,image->columns,image->rows,exception);
+               if (status == MagickFalse)
+                 break;
+-              if ((image->colors == 0) && (bpp != 24))
++              if ((image->colors == 0) && (bpp <= 16))
+                 {
+                   image->colors=one << bpp;
+                   if (!AcquireImageColormap(image,image->colors,exception))
+-- 
+2.25.1
+

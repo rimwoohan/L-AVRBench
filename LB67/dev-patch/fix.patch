@@ -1,0 +1,29 @@
+From f1f2089e79bcf5714cefba7cdc47049b4ac53c6b Mon Sep 17 00:00:00 2001
+From: Cristy <urban-warrior@imagemagick.org>
+Date: Mon, 7 Aug 2017 15:40:27 -0400
+Subject: [PATCH] https://github.com/ImageMagick/ImageMagick/issues/648
+
+---
+ coders/mat.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/coders/mat.c b/coders/mat.c
+index b5c91b2aa..e3b80f14b 100644
+--- a/coders/mat.c
++++ b/coders/mat.c
+@@ -966,7 +966,11 @@ MATLAB_KO:
+     }
+ #endif
+ 
+-    if(MATLAB_HDR.DataType!=miMATRIX) continue;  /* skip another objects. */
++    if (MATLAB_HDR.DataType!=miMATRIX)
++      {
++        clone_info=DestroyImageInfo(clone_info);
++        continue;  /* skip another objects. */
++      }
+ 
+     MATLAB_HDR.unknown1 = ReadBlobXXXLong(image2);
+     MATLAB_HDR.unknown2 = ReadBlobXXXLong(image2);
+-- 
+2.25.1
+
