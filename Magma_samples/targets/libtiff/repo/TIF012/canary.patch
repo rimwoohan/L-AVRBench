@@ -1,0 +1,23 @@
+diff --git a/libtiff/tif_dir.c b/libtiff/tif_dir.c
+index a6c254fc..1e8b1c33 100644
+--- a/libtiff/tif_dir.c
++++ b/libtiff/tif_dir.c
+@@ -129,3 +128,7 @@ setExtraSamples(TIFF* tif, va_list ap, uint32_t* v)
++        if ( td->td_transferfunction[0] != NULL && (td->td_samplesperpixel - *v > 1) &&
++                !(td->td_samplesperpixel - td->td_extrasamples > 1)){
++            fprintf(stdout, "CANARY_DETECT\n");
++        }
+ 
+ 	td->td_extrasamples = (uint16_t) *v;
+ 	_TIFFsetShortArray(&td->td_sampleinfo, va, td->td_extrasamples);
+@@ -302,3 +305,10 @@ _TIFFVSetField(TIFF* tif, uint32_t tag, va_list ap)
++            if (td->td_sminsamplevalue != NULL || \ 
++                (td->td_smaxsamplevalue != NULL || \ 
++                 (td->td_transferfunction[0] != NULL && \ 
++                  (v - td->td_extrasamples > 1 && \ 
++                   !(td->td_samplesperpixel - td->td_extrasamples > 1))))) {
++                    fprintf(stdout, "CANARY_DETECT\n");
++            }
+         }
+ 		td->td_samplesperpixel = (uint16_t) v;
+ 		break;

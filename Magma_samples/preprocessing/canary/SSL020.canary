@@ -1,0 +1,9 @@
+diff --git a/ssl/t1_lib.c b/ssl/t1_lib.c
+index d99a43546f..77d1901f66 100644
+--- a/ssl/t1_lib.c
++++ b/ssl/t1_lib.c
+@@ -1896,3 +1896,4 @@ SSL_TICKET_STATUS tls_decrypt_ticket(SSL *s, const unsigned char *etick,
++    if (eticklen <= TLSEXT_KEYNAME_LENGTH + EVP_CIPHER_CTX_get_iv_length(ctx) + mlen) { fprintf(stdout, "CANARY_DETECT\n");exit(13);}
+     eticklen -= mlen;
+     if (ssl_hmac_update(hctx, etick, eticklen) <= 0
+         || ssl_hmac_final(hctx, tick_hmac, NULL, sizeof(tick_hmac)) <= 0) {

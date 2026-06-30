@@ -1,0 +1,9 @@
+diff --git a/src/where.c b/src/where.c
+index 2b9cace..cb2e91f 100644
+--- a/src/where.c
++++ b/src/where.c
+@@ -2839,3 +2839,4 @@ static int whereLoopAddBtreeIndex(
++    if (pNew->nLSlot < (pNew->nLTerm+1)) {fprintf(stdout, "CANARY_DETECT\n");exit(13);}
+     LogEst nIter;
+     pNew->u.btree.nEq++;
+     pNew->nSkip++;

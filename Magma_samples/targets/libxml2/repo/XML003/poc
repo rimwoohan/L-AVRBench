@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE  somedoc [
+  <!ENTITY a   "somethhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh/example.org/b/b.dtd">
+%b;
+<!ENTITY % c SYSTEM "http://example.org/c/c.dtd">
+%c;
+<!ENTITY % a SYSTEM "http://example.hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh..........-.hhhhhhhhhhhhhhhhhhhhhhhhhing">
+  <!ENTITY b   "&a;">
+]>
+
+<somedoc>
+
+<somebeacon someattribute="&b;"/>
+
+&a; should appear after colon: &a;
+&b; should appear after colon: &a;
+&a; should appear after colon: &DOCTYPE abc SYSTEM#32;&#32<y&#32;" b="&#32;x&#32;&#32;y&#32;"/>
+<tst a=" a b ;B&da;" b="&d;&d;A&a;,ex20;&a;B&da;"/>
+<tst a#IMPLIED>
+<!ATTLIST tst b CDATA #IMPLIEDhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh>
+<!ENTITY d """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""&#¹­;">
+<!ENTITY a #&#xA;">
+<!ENTITY da "&#xD;&#xA;">
+]>
+<do1.0" c>
+<tst a="
+
+xyz" b="
+
+xyz"/>
+<tst a="&d;&d;A&a;&#x20371;&a<!DOCT¦PE doc.p [
+<!ELEMENT doc (tsbt*)>
+<!ELEMENT tst (#PCDxd;&#xa;"/>
+<tst a="&#32;x&#32;&#32<y&#32;" b="&#32;x&#32;&#322222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222r222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222;y&#32;"/>
+<tst a=" a b ;B&da;" b="&d;&d;A&a;&#x20;&a;B&da;"/>
+<tst a="&#;">
+]="&#;">
+]>>>>>>
+<doc>
+<tst a="
+
+xyz" b="
+
+xyz"/>
+<tst a="&d;&d;A&a;&#x20;&a;B&da;" b="&d;&d;A&a;&#x20;&a;B&da;"/>
+<<<<<<<<<<<<<<<<<<<<<tst a="&#xd;&#xd;A&#xa;&#xa;B&#x5Dyª	ŽðêÔ:õD3@÷$µ[¤Û~—œ]áM,Jüá­<i,¬“)Ò‰šÃ^Y“›×:}Íl?Ò˜°û¸?Ûù<ñùW}Ve’†e÷ÂÇ¦·8Ñ8Ðz6š49dàE˜ÑÖñ}+z–ô€Ü±vrÀènvËö.µj™ëŠûÿ)Ô‡úÖ7­„¤©Hà,ÚBÇŒ¤;P ‡S¥£Ø Úu¸yÿ7ºd›r#"ì%xþñðúüd;&#xa;" b="&#xd;&#xd;A&#xa;&#xa;B&#ATA)>
+<!ATTLIST tst a NMTOKENS #IMPLIED>
+<!ATTLIST tst b CDATA #IMPLIED>
+<!ENTITY d "&#xD;">
+<!ENTITding="UTF-8"?>
+<!--
+http://www.w3.org/TR/xmldsig2ed-tests/#XcMLID
+
+Check that implementations of [XML-C14N1.1] handle xml:id attributes 
+as defined in [XML-C14N1.1]
+-->
+<ietf:c14n11XmlIdDoc1  "http://example.o.org/abc.dtd">
+<abc>
+  <a>Let's use predefined entb;
+&b; should ap¼ear after colon: &b;
+
+</somedoc>

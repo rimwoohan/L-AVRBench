@@ -1,0 +1,9 @@
+diff --git a/valid.c b/valid.c
+index 3f6d57b5..80a0e5f8 100644
+--- a/valid.c
++++ b/valid.c
+@@ -1322,3 +1322,4 @@ xmlSnprintfElementContent(char *buf, int size, xmlElementContentPtr content, int
++        if ((size - len - xmlStrlen(content->prefix)) < (xmlStrlen(content->name) + 10)){fprintf(stdout, "CANARY_DETECT\n");exit(13);}
+  if ( content -> name != NULL )
+  strcat ( buf , ( char * ) content -> name ) ;
+  break ;

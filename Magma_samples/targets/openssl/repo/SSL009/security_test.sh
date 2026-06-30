@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+### ex) ./security_test.sh 001.patch
+
+patch_name=${1%.patch}
+
+mkdir -p "test_result/security"
+
+if [ -f "`pwd`/out/$patch_name/x509" ]; then
+    "`pwd`/out/$patch_name/x509" "`pwd`/poc" > "`pwd`/test_result/security/$patch_name" 2>&1
+else
+    exit 11
+fi
+

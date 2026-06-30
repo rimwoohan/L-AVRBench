@@ -1,0 +1,9 @@
+diff --git a/src/select.c b/src/select.c
+index 382421c..1f4eb60 100644
+--- a/src/select.c
++++ b/src/select.c
+@@ -2959,3 +2959,4 @@ static int multiSelect(
++  if (pParse->nErr != 0) {fprintf(stdout, "CANARY_DETECT\n");exit(13);}
+   if( p->selFlags & SF_UsesEphemeral ){
+     int i;
+     KeyInfo *pKeyInfo;

@@ -1,0 +1,9 @@
+diff --git a/poppler/JPEG2000Stream.cc b/poppler/JPEG2000Stream.cc
+index 36da2fcd..9cc284e9 100644
+--- a/poppler/JPEG2000Stream.cc
++++ b/poppler/JPEG2000Stream.cc
+@@ -299,3 +299,4 @@ void JPXStream::init()
++            if (componentPixels != priv->npixels) {fprintf(stdout, "CANARY_DETECT\n");exit(13);}
+             unsigned char *cdata = (unsigned char *)priv->image->comps[component].data;
+             int adjust = 0;
+             int depth = priv->image->comps[component].prec;

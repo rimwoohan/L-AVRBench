@@ -1,0 +1,9 @@
+diff --git a/src/select.c b/src/select.c
+index 77c5b7b..5022f31 100644
+--- a/src/select.c
++++ b/src/select.c
+@@ -5510,3 +5510,4 @@ static int selectExpander(Walker *pWalker, Select *p){
++  if (pParse->nErr) {fprintf(stdout, "CANARY_DETECT\n");exit(13);}
+    for ( k = 0 ; k < pEList -> nExpr ; k ++ ) {
+  pE = pEList -> a [ k ] . pExpr ;
+  if ( pE -> op == TK_ASTERISK ) break ;

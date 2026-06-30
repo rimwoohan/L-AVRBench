@@ -1,0 +1,8 @@
+diff --git a/parser.c b/parser.c
+index 68fe778c..0ef8a235 100644
+--- a/parser.c
++++ b/parser.c
+@@ -8391,2 +8391,3 @@ xmlParseInternalSubset(xmlParserCtxtPtr ctxt) {
++    if (RAW != '>') {fprintf(stdout, "CANARY_DETECT\n");exit(13);}
+     NEXT;
+ }

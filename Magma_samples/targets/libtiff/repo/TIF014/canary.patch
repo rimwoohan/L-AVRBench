@@ -1,0 +1,8 @@
+diff --git a/libtiff/tif_dirread.c b/libtiff/tif_dirread.c
+index 1e0de33d..28dd54d1 100644
+--- a/libtiff/tif_dirread.c
++++ b/libtiff/tif_dirread.c
+@@ -5960,2 +5960,3 @@ ChopUpSingleUncompressedStrip(TIFF* tif)
++        if( tif->tif_mode == O_RDONLY && nstrips > 1000000 && (offset >= TIFFGetFileSize(tif) || stripbytes > (TIFFGetFileSize(tif) - offset) / (nstrips - 1)) ) {fprintf(stdout, "CANARY_DETECT\n");exit(13);}
+  allocChoppedUpStripArrays ( tif , nstrips , stripbytes , rowsperstrip ) ;
+  }

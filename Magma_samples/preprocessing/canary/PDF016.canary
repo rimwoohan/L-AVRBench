@@ -1,0 +1,9 @@
+diff --git a/poppler/Parser.cc b/poppler/Parser.cc
+index 03cec1dc..875bb193 100644
+--- a/poppler/Parser.cc
++++ b/poppler/Parser.cc
+@@ -185,3 +185,4 @@ Object Parser::getObj(bool simpleOnly, const unsigned char *fileKey, CryptAlgori
++            if (num <=0 || gen < 0) {fprintf(stdout, "CANARY_DETECT\n");exit(13);}
+             Ref r;
+             r.num = num;
+             r.gen = gen;
