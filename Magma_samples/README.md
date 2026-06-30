@@ -1,7 +1,3 @@
-# patching-bench
-
-## USAGE
-
 ### 1. Build AFL
 
 ```shell
