@@ -163,8 +163,11 @@ Until those Docker images are available, please follow the instructions provided
 ## References
 
 [1] Google OSS-Fuzz. https://github.com/google/oss-fuzz
+
 [2] ARVO: Atlas of Reproducible Vulnerabilities. https://github.com/n132/ARVO-Meta
+
+[3] Magma: A Ground-Truth Fuzzing Benchmark. https://github.com/HexHive/magma
 
 ## Citation
 
-If you use L-AVRBench in your research, please cite this repository.
+If you use L-AVRBench in your research, please cite this repository or the paper.
