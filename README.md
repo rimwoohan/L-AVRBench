@@ -1,3 +1,5 @@
+**L-AVRBench** — benchmark from **Rethinking the Capabilities of Fine-tuned Language Models for Automated Vulnerability Repair** (ICSE ’26)
+
 # L-AVRBench
 
 L-AVRBench is a reproducible benchmark for evaluating vulnerability patches, built on top of real-world vulnerable software samples. Each benchmark sample ships with a containerized build environment so that a candidate patch can be compiled and validated through both **security testing** (does it actually fix the vulnerability) and **functionality testing** (does it preserve correct behavior).
